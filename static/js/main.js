@@ -125,7 +125,7 @@ fetch('./static/geojson/rivers.json')
       const getFDCValues = (feature, layer) => {
           layer.bindPopup(
             [0, 10, 30, 50, 80, 95, 'AVG'].map(ep => `Q${ep}: ${feature.properties[`Q${ep}`]}<br>`).join('') +
-            '<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="plotFDC()" data-bs-target="#exampleModal">Plot FDC</button>' +
+            '<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="plotFDCgage()" data-bs-target="#exampleModal">Plot FDC</button>' +
             '<button type="button" class="btn btn-success" onclick="download()">Download CSV</button>'
           );
           layer.on('click', a => plotData = a.target.feature.properties)
