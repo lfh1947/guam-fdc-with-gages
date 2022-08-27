@@ -117,8 +117,9 @@ fetch('./static/geojson/rivers.json')
       }
       const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
       layerControl.addOverlay(riverGeoJSON, "Selected River gages in Guam")
-      console.log("just after gages to map");
+      console.log("just after rivers to map");
   })
+      console.log("just before gage json fetch");
   fetch('./static/geojson/gages.json')
   .then(response => response.json())
   .then(geojson => {
@@ -132,5 +133,5 @@ fetch('./static/geojson/rivers.json')
       }
       const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
       layerControl.addOverlay(riverGeoJSON, "Selected River Reach in Guam")
-      console.log("just after river to map");
+      console.log("just after gages to map");
   }) 
