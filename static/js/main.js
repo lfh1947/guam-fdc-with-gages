@@ -59,33 +59,6 @@ const plotFDC = () => {
     Plotly.newPlot('plot-div', [fdcTrace,], layout)
 }
 
-const plotFDCgage = () => {
-    const eps = [0, 10, 30, 50, 80, 95]
-    const fdcTrace = {
-        x: eps,
-        y: eps.map(ep => plotData[`Q${ep}`]),
-        type: 'scatter',
-        name: 'Flow Duration Curve',
-    };
-    const layout = {
-        title: {
-            text: `FLOW DURATION CURVE FOR ${plotData.NAME} ,
-            font: {
-                size: 20
-            }
-        },
-        xaxis: {
-            title: "Exceedance Probability (%)",
-            range: [0, 100],
-            nticks: 50,
-        },
-        yaxis: {
-            title: "Discharge (cfs)",
-            type: "log"
-        }
-    }
-    Plotly.newPlot('plot-div', [fdcTrace,], layout)
-}
 const download = () => {
     const eps = [0, 10, 30, 50, 80, 95]
     const a = document.createElement('a')
@@ -95,12 +68,6 @@ const download = () => {
     a.click()
     document.body.removeChild(a)
 }   
-
-
-
-
-
-
 // https://github.com/lfh1947/guam_ugum_web/blob/main/rivers.json
 // fetch('https://github.com/lfh1947/guam_ugum_web/blob/main/rivers.json')
 //fetch('./static/geojson/rivers.json')
@@ -116,23 +83,8 @@ fetch('./static/geojson/rivers.json')
           );
           layer.on('click', a => plotData = a.target.feature.properties)
       }
-      const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
-      layerControl.addOverlay(riverGeoJSON, "Selected River gages in Guam")
-      console.log("just after rivers to map");
-  })
-      console.log("just before gage json fetch");
-  fetch('./static/geojson/gages.json')
-  .then(response => response.json())
-  .then(geojson => {
-      const getFDCValues = (feature, layer) => {
-          layer.bindPopup(
-            [0, 10, 30, 50, 80, 95, 'AVG'].map(ep => `Q${ep}: ${feature.properties[`Q${ep}`]}<br>`).join('') +
-            '<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="plotFDCgage()" data-bs-target="#exampleModal">Plot FDC</button>' +
-            '<button type="button" class="btn btn-success" onclick="download()">Download CSV</button>'
-          );
-          layer.on('click', a => plotData = a.target.feature.properties)
-      }
-      const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
+      const riverGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
       layerControl.addOverlay(riverGeoJSON, "Selected River Reach in Guam")
-      console.log("just after gages to map");
-  }) 
+      console.log("just after river to map");
+  })
+  
