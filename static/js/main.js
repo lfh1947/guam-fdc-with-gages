@@ -58,6 +58,7 @@ const plotFDC = () => {
     }
     Plotly.newPlot('plot-div', [fdcTrace,], layout)
 }
+
 const plotFDCgage = () => {
     const eps = [0, 10, 30, 50, 80, 95]
     const fdcTrace = {
@@ -68,7 +69,7 @@ const plotFDCgage = () => {
     };
     const layout = {
         title: {
-            text: `Flow Duration Curve for gage ${plotData.NAME} - Reach ID ${plotData.ARCID}`,
+            text: `FLOW DURATION CURVE FOR ${plotData.NAME} ,
             font: {
                 size: 20
             }
