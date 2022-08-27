@@ -68,7 +68,7 @@ const plotFDCgage = () => {
     };
     const layout = {
         title: {
-            text: `Flow Duration Curve for ${plotData.streamName} - Reach ID ${plotData.ARCID}`,
+            text: `Flow Duration Curve for ${plotData.NAME} - Reach ID ${plotData.ARCID}`,
             font: {
                 size: 20
             }
