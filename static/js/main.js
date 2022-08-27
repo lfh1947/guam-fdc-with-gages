@@ -58,7 +58,33 @@ const plotFDC = () => {
     }
     Plotly.newPlot('plot-div', [fdcTrace,], layout)
 }
-
+const plotFDCgage = () => {
+    const eps = [0, 10, 30, 50, 80, 95]
+    const fdcTrace = {
+        x: eps,
+        y: eps.map(ep => plotData[`Q${ep}`]),
+        type: 'scatter',
+        name: 'Flow Duration Curve',
+    };
+    const layout = {
+        title: {
+            text: `Flow Duration Curve for ${plotData.streamName} - Reach ID ${plotData.ARCID}`,
+            font: {
+                size: 20
+            }
+        },
+        xaxis: {
+            title: "Exceedance Probability (%)",
+            range: [0, 100],
+            nticks: 50,
+        },
+        yaxis: {
+            title: "Discharge (cfs)",
+            type: "log"
+        }
+    }
+    Plotly.newPlot('plot-div', [fdcTrace,], layout)
+}
 const download = () => {
     const eps = [0, 10, 30, 50, 80, 95]
     const a = document.createElement('a')
@@ -68,6 +94,12 @@ const download = () => {
     a.click()
     document.body.removeChild(a)
 }   
+
+
+
+
+
+
 // https://github.com/lfh1947/guam_ugum_web/blob/main/rivers.json
 // fetch('https://github.com/lfh1947/guam_ugum_web/blob/main/rivers.json')
 //fetch('./static/geojson/rivers.json')
