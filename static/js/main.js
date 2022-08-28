@@ -27,7 +27,7 @@ const merizo = L.marker([13.2682, 144.6918]).bindPopup('Merizo')
 
 const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo]).addTo(map);
 
-//const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
+const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
 console.log("just before plot data");
 let plotData
@@ -116,12 +116,12 @@ fetch('./static/geojson/rivers.json')
           );
           layer.on('click', a => plotData = a.target.feature.properties)
       }
-      const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
-      layerControl.addOverlay(riverGeoJSON, "Selected River gages in Guam")
+      const riverGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
+      layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
       console.log("just after rivers to map");
   })
       console.log("just before gage json fetch");
-  fetch('./static/geojson/gages.json')
+fetch('./static/geojson/gages.json')
   .then(response => response.json())
   .then(geojson => {
       const getFDCValues = (feature, layer) => {
@@ -133,6 +133,6 @@ fetch('./static/geojson/rivers.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
-      layerControl.addOverlay(riverGeoJSON, "Selected River Reach in Guam")
+      layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
       console.log("just after gages to map");
   }) 
