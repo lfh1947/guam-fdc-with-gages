@@ -27,7 +27,7 @@ const merizo = L.marker([13.2682, 144.6918]).bindPopup('Merizo')
 
 const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo]).addTo(map);
 
-const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
+//const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
 console.log("just before plot data");
 let plotData
