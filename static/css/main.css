@@ -19,7 +19,7 @@ body {
 #title-bar {
     text-align: center;
     height: 10%;
-    padding: 0;
+    padding bottom: 20px;
     margin: 0;
 }
 #map {
