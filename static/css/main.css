@@ -18,10 +18,10 @@ body {
 }
 #title-bar {
     text-align: center;
-    height: 12%;
+    height: 10%;
     padding : 20px;
     margin: 0;
 }
 #map {
-    height: 88%;
+    height: 90%;
 }
