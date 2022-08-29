@@ -138,26 +138,11 @@ fetch('./static/geojson/gages.json')
         shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
     })
       
-      const gageGeoJSON = L.geoJSON(geojson, {icon: greenIcon},{onEachFeature: getFDCValues}).addTo(map);
-      // options for marker
-        // const myCustomColour = '#583470'
-        //const LeafIcon = L.Icon.extend({
-         //   options: {
-          //     iconSize:     [38, 95],
-           //    shadowSize:   [50, 64],
-           //    iconAnchor:   [22, 94],
-            //   shadowAnchor: [4, 62],
-            //   popupAnchor:  [-3, -76]
-            //}
-        //});
-        
-        
-        // const markerHtmlStyles= '
-           //background-color: ${myCustomColour};
-           //border: 1px solid #FFFFFF'
+      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
-         //background-color: ${myCustomColour}
-         //border: 1px solid #FFFFFF` 
+        
+        
+        
 
       layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
       console.log("just after gages to map");
