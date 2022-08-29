@@ -134,11 +134,24 @@ fetch('./static/geojson/gages.json')
       }
       const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
       // options for marker
-      const myCustomColour = '#583470'
-
-      //const markerHtmlStyles= '
-        //background-color: ${myCustomColour};
-        //border: 1px solid #FFFFFF'
+        // const myCustomColour = '#583470'
+        const LeafIcon = L.Icon.extend({
+            options: {
+               iconSize:     [38, 95],
+               shadowSize:   [50, 64],
+               iconAnchor:   [22, 94],
+               shadowAnchor: [4, 62],
+               popupAnchor:  [-3, -76]
+            }
+        });
+        const greenIcon = new LeafIcon({
+            iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+            shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
+        })
+        
+        // const markerHtmlStyles= '
+           //background-color: ${myCustomColour};
+           //border: 1px solid #FFFFFF'
       
          //background-color: ${myCustomColour}
          //border: 1px solid #FFFFFF` 
