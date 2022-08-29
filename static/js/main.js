@@ -133,6 +133,14 @@ fetch('./static/geojson/gages.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       const gageGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
+      // options for marker
+      const myCustomColour = '#583470'
+
+      const markerOptions= {
+        title:"gages",
+        clickable: true
+        //background-color: ${myCustomColour}
+      }
       layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
       console.log("just after gages to map");
   }) 
