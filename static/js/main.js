@@ -136,9 +136,9 @@ fetch('./static/geojson/gages.json')
       // options for marker
       const myCustomColour = '#583470'
 
-      const markerHtmlStyles= '
-        background-color: ${myCustomColour};
-        border: 1px solid #FFFFFF'
+      //const markerHtmlStyles= '
+        //background-color: ${myCustomColour};
+        //border: 1px solid #FFFFFF'
       
          //background-color: ${myCustomColour}
          //border: 1px solid #FFFFFF` 
