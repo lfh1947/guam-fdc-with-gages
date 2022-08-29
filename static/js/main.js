@@ -136,11 +136,13 @@ fetch('./static/geojson/gages.json')
       // options for marker
       const myCustomColour = '#583470'
 
-      const markerOptions= {
-        title:"gages",
-        clickable: true
-        //background-color: ${myCustomColour}
-      }
+      const markerHtmlStyles= '
+        background-color: ${myCustomColour};
+        border: 1px solid #FFFFFF'
+      
+         //background-color: ${myCustomColour}
+         //border: 1px solid #FFFFFF` 
+
       layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
       console.log("just after gages to map");
   }) 
