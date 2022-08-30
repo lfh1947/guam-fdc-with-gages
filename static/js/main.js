@@ -25,7 +25,7 @@ const inarajan = L.marker([13.2792, 144.7302]).bindPopup('Inajaran')
 const umatac = L.marker([13.3139, 144.6698]).bindPopup('Umatac')
 const merizo = L.marker([13.2682, 144.6918]).bindPopup('Merizo')
 
-const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
+//const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
 const greenIcon = new L.icon({
     iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
     iconSize:[38,95],
@@ -33,7 +33,8 @@ const greenIcon = new L.icon({
     popupAnchor:[12,-90]
     //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
    })
-const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
+const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
+   //const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
 console.log("just before plot data");
 let plotData
@@ -139,17 +140,17 @@ fetch('./static/geojson/gages.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       
-      const greenIcon = new L.icon({
-        iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-        iconSize:[38,95],
-        iconAnchor:[22,94],
-        popupAnchor:[12,-90]
+      //const greenIcon = new L.icon({
+      //  iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+      //  iconSize:[38,95],
+      //  iconAnchor:[22,94],
+       // popupAnchor:[12,-90]
         //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
        })
       
-      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
+      //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
-      //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}).addTo(map); 
+      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}).addTo(map); 
         
         
 
