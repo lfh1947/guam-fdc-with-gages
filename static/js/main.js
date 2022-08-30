@@ -111,7 +111,7 @@ const download = () => {
 
 
 
-console.log("just before fetch");
+console.log("just before rivers fetch");
 fetch('./static/geojson/rivers.json')
   .then(response => response.json())
   .then(geojson => {
@@ -124,7 +124,7 @@ fetch('./static/geojson/rivers.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       const riverGeoJSON = L.geoJSON(geojson, {onEachFeature: getFDCValues}).addTo(map);
-      layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
+      // layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
       console.log("just after rivers to map");
   })
       console.log("just before gage json fetch");
@@ -154,6 +154,6 @@ fetch('./static/geojson/gages.json')
         
         
 
-      layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
+      // layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
       console.log("just after gages to map");
   }) 
