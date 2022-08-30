@@ -146,7 +146,7 @@ fetch('./static/geojson/gages.json')
       //  iconAnchor:[22,94],
        // popupAnchor:[12,-90]
         //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-       })
+       //})
       
       //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
