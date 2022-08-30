@@ -138,9 +138,9 @@ fetch('./static/geojson/gages.json')
         shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
     })
       
-      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
+      //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
-        
+      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}).addTo(map); 
         
         
 
