@@ -34,7 +34,7 @@ const greenIcon = new L.icon({
     //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
    })
 const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
-   //const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
+const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
 console.log("just before plot data");
 let plotData
