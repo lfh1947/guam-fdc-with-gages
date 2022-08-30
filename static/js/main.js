@@ -133,10 +133,10 @@ fetch('./static/geojson/gages.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       
-      const greenIcon = new LeafIcon({
-        iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-        shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-    })
+      //const greenIcon = new LeafIcon({
+        //iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+        //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
+    //})
       
       //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
