@@ -154,6 +154,6 @@ fetch('./static/geojson/gages.json')
         
         
 
-      // layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
+       layerControl.addOverlay(gageGeoJSON, "Selected stream gage in Guam")
       console.log("just after gages to map");
   }) 
