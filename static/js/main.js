@@ -189,7 +189,7 @@ fetch('./static/geojson/gages.json')
       
       const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues},{customIcon2}).addTo(map);        
       console.log("just before  gages layer control");  
-      layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
+      //layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
       layerControl.addOverlay(gageGeoJSON, "Selected stream gages")
       console.log("just after gages to map");
   }) 
