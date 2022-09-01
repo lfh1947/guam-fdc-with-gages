@@ -8,7 +8,17 @@ const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
+var myIcon = L.icon({
+    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+    iconSize: [38, 95],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowUrl: 'my-icon-shadow.png',
+    shadowSize: [68, 95],
+    //shadowAnchor: [22, 94]
+});
 
+L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
 
 
 const yigo = L.marker([13.5640, 144.9061]).bindPopup('Yigo')
