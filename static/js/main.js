@@ -18,8 +18,8 @@ console.log("just before single marker above dededot");
 
 const myIcon = L.icon({
     iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-    iconSize: [38, 40],
-    iconAnchor: [22, 40],
+    iconSize: [18, 46],
+    iconAnchor: [10, 45],
     popupAnchor: [-3, -76]
       //shadowUrl: 'my-icon-shadow.png',
       //shadowSize: [68, 95],
@@ -48,15 +48,15 @@ const umatac = L.marker([13.3139, 144.6698]).bindPopup('Umatac')
 const merizo = L.marker([13.2682, 144.6918]).bindPopup('Merizo')
 
 //const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
-const greenIcon = new L.icon({
-    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-    iconSize:[38,95],
-    iconAnchor:[22,94],
-    popupAnchor:[12,-90]
+//const greenIcon = new L.icon({
+  //  iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+  //  iconSize:[38,95],
+   // iconAnchor:[22,94],
+   // popupAnchor:[12,-90]
     //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-   })
+  // })
 //const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);  
-const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
+//const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
 const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
 console.log("just before plot data");
