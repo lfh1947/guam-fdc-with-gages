@@ -31,7 +31,7 @@ L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
 
 console.log("just after single marker above dededo");
 
-const yigo = L.marker([13.5640, 144.9061]).bindPopup('Yigo')
+const yigo = L.marker([13.5640, 144.9061],{icon: myIcon}).bindPopup('Yigo')
 const dededo = L.marker([13.5453, 144.8511]).bindPopup('Dededo')
 const mangilao = L.marker([13.4702, 144.8456]).bindPopup('Mangilao')
 const tamuning = L.marker([13.5005, 144.7956]).bindPopup('Tamuning')
