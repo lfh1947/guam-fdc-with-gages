@@ -18,7 +18,7 @@ console.log("just before single marker above dededot");
 
 const myIcon = L.icon({
     iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-    iconSize: [38, 60],
+    iconSize: [38, 40],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76]
       //shadowUrl: 'my-icon-shadow.png',
@@ -167,24 +167,24 @@ fetch('./static/geojson/gages.json')
          // Icon options
          const iconOptions = {
             iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-            iconSize:[38,95],
+            iconSize:[38,50],
             iconAnchor:[22,94],
              popupAnchor:[12,-90]
          }
          // Creating a custom icon
-         const customIcon = L.icon(iconOptions);
+         const customIcon2 = L.icon(iconOptions);
 
       // Creating Marker Options
       const  markerOptions = {
         title: "MyLocation",
         clickable: true,        
-        icon: customIcon
+        icon: customIcon2
      }
 
       
       //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
-      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues},markerOptions).addTo(map);        
+      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues},customIcon2).addTo(map);        
       console.log("just before  gages layer control");  
     //  layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
       layerControl.addOverlay(gageGeoJSON, "Selected stream gages")
