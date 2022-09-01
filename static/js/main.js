@@ -146,8 +146,10 @@ fetch('./static/geojson/gages.json')
       
          // Icon options
          const iconOptions = {
-            iconUrl: 'my-icon.png',
-            iconSize: [50, 50]
+            iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+            iconSize:[38,95],
+            iconAnchor:[22,94],
+             popupAnchor:[12,-90]
          }
          // Creating a custom icon
          const customIcon = L.icon(iconOptions);
