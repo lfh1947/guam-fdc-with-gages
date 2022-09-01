@@ -9,6 +9,8 @@ const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
+
+
 const yigo = L.marker([13.5640, 144.9061]).bindPopup('Yigo')
 const dededo = L.marker([13.5453, 144.8511]).bindPopup('Dededo')
 const mangilao = L.marker([13.4702, 144.8456]).bindPopup('Mangilao')
@@ -33,6 +35,7 @@ const greenIcon = new L.icon({
     popupAnchor:[12,-90]
     //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
    })
+//const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);  
 const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
 const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
@@ -140,17 +143,26 @@ fetch('./static/geojson/gages.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       
-      //const greenIcon = new L.icon({
-      //  iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-      //  iconSize:[38,95],
-      //  iconAnchor:[22,94],
-       // popupAnchor:[12,-90]
-        //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-       //})
+      
+         // Icon options
+         const iconOptions = {
+            iconUrl: 'my-icon.png',
+            iconSize: [50, 50]
+         }
+         // Creating a custom icon
+         const customIcon = L.icon(iconOptions);
+
+      // Creating Marker Options
+      const  markerOptions = {
+        title: "MyLocation",
+        clickable: true,        
+        icon: customIcon
+     }
+
       
       //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
-      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}).addTo(map);        
+      const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues},markerOptions).addTo(map);        
       console.log("just before  gages layer control");  
     //  layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
       layerControl.addOverlay(gageGeoJSON, "Selected stream gages")
