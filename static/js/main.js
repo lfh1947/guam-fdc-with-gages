@@ -18,8 +18,8 @@ var myIcon = L.icon({
     //shadowAnchor: [22, 94]
 });
 
-L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
-
+//L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
+L.marker([13.56403, 144.8511], ).addTo(map);
 
 const yigo = L.marker([13.5640, 144.9061]).bindPopup('Yigo')
 const dededo = L.marker([13.5453, 144.8511]).bindPopup('Dededo')
