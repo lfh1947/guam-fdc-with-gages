@@ -11,10 +11,7 @@ const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 console.log("just before single marker above dededot");
 
 
- //const myIcon = L.divIcon({className: 'my-div-icon'});
- // you can set .my-div-icon styles in CSS
-
-// L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
+ 
 
 const myIcon = L.icon({
     iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
@@ -56,7 +53,7 @@ const merizo = L.marker([13.2682, 144.6918]).bindPopup('Merizo')
     //shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
   // })
 //const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);  
-//const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
+const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo]).addTo(map);
 const layerControl = L.control.layers({"Open Street Map": osm}, {"Villages": villages}).addTo(map);
 
 console.log("just before plot data");
