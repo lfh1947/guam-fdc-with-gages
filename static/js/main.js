@@ -7,25 +7,25 @@ const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
-
-// const myIcon = L.divIcon({className: 'my-div-icon'});
-// you can set .my-div-icon styles in CSS
+console.log("just before single marker above dededot");
+ //const myIcon = L.divIcon({className: 'my-div-icon'});
+ // you can set .my-div-icon styles in CSS
 
 // L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
 
-//const myIcon = L.icon({
- //   iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
- //   iconSize: [38, 95],
- //   iconAnchor: [22, 94],
- //   popupAnchor: [-3, -76],
- //   //shadowUrl: 'my-icon-shadow.png',
+const myIcon = L.icon({
+    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+    iconSize: [38, 95],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76]
+      //shadowUrl: 'my-icon-shadow.png',
       //shadowSize: [68, 95],
-     //shadowAnchor: [22, 94]
-//});
+      //shadowAnchor: [22, 94]
+});
 
-//L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
-L.marker([13.56403, 144.8511], ).addTo(map);
-
+L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
+//L.marker([13.56403, 144.8511], ).addTo(map);
+onsole.log("just after single marker above dededo");
 const yigo = L.marker([13.5640, 144.9061]).bindPopup('Yigo')
 const dededo = L.marker([13.5453, 144.8511]).bindPopup('Dededo')
 const mangilao = L.marker([13.4702, 144.8456]).bindPopup('Mangilao')
