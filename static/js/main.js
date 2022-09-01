@@ -163,30 +163,33 @@ fetch('./static/geojson/gages.json')
           layer.on('click', a => plotData = a.target.feature.properties)
       }
       
-      
+      console.log("just before new gage icon  setup");
          // Icon options
-         const iconOptions = {
+         const iconOptions2 = {
             iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
             iconSize:[38,50],
             iconAnchor:[22,94],
              popupAnchor:[12,-90]
          }
+         
          // Creating a custom icon
-         const customIcon2 = L.icon(iconOptions);
+         const customIcon2 = L.icon(iconOptions2);
+
+         console.log("just after icon setup");
 
       // Creating Marker Options
-      const  markerOptions = {
-        title: "MyLocation",
-        clickable: true,        
-        icon: customIcon2
-     }
+      //const  markerOptions = {
+        //title: "MyLocation",
+        //clickable: true,        
+        //icon: customIcon2
+     //}
 
       
       //const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues}, {icon: greenIcon}).addTo(map);
       
       const gageGeoJSON = L.geoJSON(geojson,{onEachFeature: getFDCValues},customIcon2).addTo(map);        
       console.log("just before  gages layer control");  
-    //  layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
+      layerControl.addOverlay(riverGeoJSON, "Selected Rivers in Guam")
       layerControl.addOverlay(gageGeoJSON, "Selected stream gages")
       console.log("just after gages to map");
   }) 
