@@ -7,7 +7,10 @@ const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
+
 console.log("just before single marker above dededot");
+
+
  //const myIcon = L.divIcon({className: 'my-div-icon'});
  // you can set .my-div-icon styles in CSS
 
@@ -25,7 +28,9 @@ const myIcon = L.icon({
 
 L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
 //L.marker([13.56403, 144.8511], ).addTo(map);
-onsole.log("just after single marker above dededo");
+
+console.log("just after single marker above dededo");
+
 const yigo = L.marker([13.5640, 144.9061]).bindPopup('Yigo')
 const dededo = L.marker([13.5453, 144.8511]).bindPopup('Dededo')
 const mangilao = L.marker([13.4702, 144.8456]).bindPopup('Mangilao')
