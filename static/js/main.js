@@ -13,7 +13,7 @@ console.log("just before single marker above dededot");
 
 
 const myIcon = L.icon({
-    iconUrl: 'https://lfh1947.github.io/guam-fdc-with-gages/static/js/c0dff74d759dfcbd3577055cda11b360.png',
+    iconUrl: 'https://lfh1947.github.io/guam-fdc-with-gages/static/js/red google icon.png',
     //iconUrl: '/placeholder.png',
     // iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-red.png',
     iconSize: [18, 46],
