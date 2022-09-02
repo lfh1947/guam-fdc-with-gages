@@ -14,7 +14,7 @@ console.log("just before single marker above dededot");
  
 
 const myIcon = L.icon({
-    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-red.png',
     iconSize: [18, 46],
     iconAnchor: [10, 45],
     popupAnchor: [-3, -76]
