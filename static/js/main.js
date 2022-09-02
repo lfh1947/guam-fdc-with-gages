@@ -43,7 +43,7 @@ const talofofo = L.marker([13.3383, 144.7302]).bindPopup('Talofofo')
 const inarajan = L.marker([13.2792, 144.7302]).bindPopup('Inajaran')
 const umatac = L.marker([13.3139, 144.6698]).bindPopup('Umatac')
 const merizo = L.marker([13.2682, 144.6918]).bindPopup('Merizo')
-
+console.log("just before constant villages");
 //const villages = L.layerGroup([yigo, dededo, mangilao, tamuning, barrigada, agana, asan, piti, yona, santaRita, agat, talofofo, inarajan, umatac, merizo],{icon: greenIcon}).addTo(map);
 //const greenIcon = new L.icon({
   //  iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
