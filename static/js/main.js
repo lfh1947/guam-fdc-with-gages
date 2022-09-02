@@ -16,8 +16,8 @@ const myIcon = L.icon({
     iconUrl: 'https://lfh1947.github.io/guam-fdc-with-gages/static/js/red google icon.png',
     //iconUrl: '/placeholder.png',
     // iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-red.png',
-    iconSize: [54, 54],
-    iconAnchor: [27, 53],
+    iconSize: [42, 42],
+    iconAnchor: [21, 41],
     popupAnchor: [-3, -76]
       //shadowUrl: 'my-icon-shadow.png',
       //shadowSize: [68, 95],
