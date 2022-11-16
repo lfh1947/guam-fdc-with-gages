@@ -24,7 +24,7 @@ const myIcon = L.icon({
       //shadowAnchor: [22, 94]
 });
 
-L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
+//L.marker([13.56403, 144.8511], {icon: myIcon}).addTo(map);
 //L.marker([13.56403, 144.8511], ).addTo(map);
 
 console.log("just after single marker above dededo");
