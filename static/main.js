@@ -149,7 +149,7 @@ fetch('./static/geojson/rivers.json')
       console.log("just after rivers to map");
   })
       console.log("just before gage json fetch");
-fetch('./static/geojson/gages.json')
+fetch('./static/geojson/gages2.json')
   .then(response => response.json())
   .then(geojson => {
       const getFDCValues = (feature, layer) => {
