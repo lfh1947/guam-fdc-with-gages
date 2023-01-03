@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[144.65955850456857,13.379077452894153]},"properties":{"AGENCY":"USGS","GAGE_NUMBE":16808300,"NAME":"FINILE CREEK AT AGAT, GUAM","DATA":"Stream","DMS":"13°22'44.8\"","DMS1":"-144°39'34.4\"","LATITUDE":13.379111,"LONGITUDE":144.659556,"lat_long":"NAD83","shortName":"FINILE CREEK","ARCID":9489,"GRID_CODE":76,"FROM_NODE":9443,"TO_NODE":9458,"Q95":0.13,"Q80":0.35,"Q50":0.87,"Q30":1.32,"Q10":2.76,"Q0":50.00,"QAVG":1.40,"Shape_Leng":21.9825409102,"medianFlow":1.45,"streamName":"","DAMi2":0.16,"AvgUs":117.86}}
+]}
