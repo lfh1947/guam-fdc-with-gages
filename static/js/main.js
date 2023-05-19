@@ -133,7 +133,7 @@ const download = () => {
 
 
 console.log("just before rivers fetch");
-fetch('./static/geojson/rivers.json')
+fetch('./static/geojson/rivers2.json')
   .then(response => response.json())
   .then(geojson => {
       const getFDCValues = (feature, layer) => {
